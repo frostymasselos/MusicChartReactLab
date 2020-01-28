@@ -4,7 +4,7 @@ import Song from './Song'
 const MusicList = (props) => {
     const songs = props.songs.map( song => {
         return(
-            <Song song={song}/>
+            <Song song={song} position={props.songs.indexOf(song) + 1}/>
         )
     })
 
