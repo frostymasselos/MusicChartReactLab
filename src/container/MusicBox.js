@@ -14,15 +14,15 @@ class MusicBox extends Component {
         const url = 'https://itunes.apple.com/gb/rss/topsongs/limit=20/json';
         fetch(url)
             .then(res => res.json())
-            .then(data => this.setState({ songs: data.feed.entry }))
+            .then(data => this.setState({ songs: data.feed.entry })) //it's replacing key-value pair.
             .catch(err => console.err());
     }
 
-    render() { 
-        return ( 
+    render() {
+        return (
             <MusicList songs={this.state.songs}/>
          );
     }
 }
- 
+
 export default MusicBox;
